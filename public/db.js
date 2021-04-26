@@ -9,7 +9,7 @@ request.onupgradeneeded = function (event) {
 request.onsuccess = function (event) {
   database = event.target.result;
 
-  // check if app is online before reading from database
+ 
   if (navigator.onLine) {
     checkDatabase();
   }
@@ -57,5 +57,5 @@ function deletePending() {
   store.clear();
 }
 
-// listen for app coming back online
+
 window.addEventListener("online", checkDatabase);
